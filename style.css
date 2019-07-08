@@ -1,3 +1,27 @@
 body {
     text-align: center;
+    background-color: black;
+}
+
+a {
+    color: whitesmoke;   
+}
+
+footer {
+    color: white;
+}
+
+.navBtn {
+    width: 6%;
+    height: auto;
+}
+
+.svBtn {
+    width: 4%;
+    height: auto;
+}
+
+#logo {
+    width: 30%;
+    height: auto;
 }

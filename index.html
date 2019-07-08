@@ -31,33 +31,36 @@
           <div class="col-sm"></div>
           <div class="col-lg" style="text-align: center">
               <br>
-              <i>Tyson Moll - Visual Tales</i><br>
-              <a href="https://twitter.com/vvvultures"><i class="fab fa-twitter"></i></a>
-              <a href="https://www.instagram.com/friendly_vultures/"><i class="fab fa-instagram"></i></a>
-              <a href="https://rateyourmusic.com/~amosmyn"><i class="fas fa-headphones-alt"></i></a>
-              <a href="https://vultures.itch.io"><i class="fab fa-itch-io"></i></a>
-              (<a href="https://tysonmoll.ca">portfolio</a>)<br>
-              <br>
+              <img src="interface/book.png" id="logo"><br>
           </div>
           <div class="col-sm"></div>
         </div>
-
-        <div class="row">
-            <div class="col-lg" id="saving">
-                <button id="save" onclick="SavePage()">save</button>
-                <button id="load" onclick="LoadPage()">load</button>
-            </div>
-            <div class="col-lg" id="nav">
-                <button id="first" visibility="hidden" onclick="ChangeComic(0)">first</button>
-                <button id="prev" visibility="hidden" onclick="ChangeComic(-2)">previous</button>
-                <button id="next" onclick="ChangeComic(-1)">next</button>
-                <button id="newest" onclick="ChangeComic(-3)">newest</button>
-            </div>
-        </div>
         <div class="row" id="comic">
             <div class="col-lg" id="comicCol">
-                <img id="comicImg" src="assets/0.jpg" width="80%" height="auto"></img>
+                <img id="comicImg" src="assets/0.jpg" width="70%" height="auto"></img>
             </div>
         </div>
+
+        <div class="row">
+                <div class="col-lg" id="saving">
+                    <img src="interface/save.png" class="svBtn" id="save" onclick="SavePage()">
+                    <img src="interface/load.png" class="svBtn" id="load" onclick="LoadPage()">
+                </div>
+                <div class="col-lg" id="nav">
+                    <img src="interface/first.png" class="svBtn" id="first" visibility="hidden" onclick="ChangeComic(0)">
+                    <img src="interface/prev.png" class="navBtn" id="prev" visibility="hidden" onclick="ChangeComic(-2)">
+                    <img src="interface/next.png" class="navBtn" id="next" onclick="ChangeComic(-1)">
+                    <img src="interface/last.png" class="svBtn" id="newest" onclick="ChangeComic(-3)">
+                </div>
+            </div>
     </div>
-  </body></html>
+  </body>
+  <footer>
+        <a href="https://twitter.com/vvvultures"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/friendly_vultures/"><i class="fab fa-instagram"></i></a>
+        <a href="https://rateyourmusic.com/~amosmyn"><i class="fas fa-headphones-alt"></i></a>
+        <a href="https://vultures.itch.io"><i class="fab fa-itch-io"></i></a>
+        (<a href="https://tysonmoll.ca">portfolio</a>)<br>
+        <br>
+  </footer>
+  </html>
