@@ -1,6 +1,8 @@
 body {
     text-align: center;
     background-color: black;
+    background-image: url("interface/repeat.png");
+    background-repeat: repeat;
 }
 
 a {
@@ -17,7 +19,12 @@ footer {
 }
 
 .svBtn {
-    width: 4%;
+    width: 5%;
+    height: auto;
+}
+
+.digit {
+    width: 6%;
     height: auto;
 }
 

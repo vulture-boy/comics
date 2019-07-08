@@ -29,12 +29,28 @@
     <div class="container">
         <div class="row" id="headSpace">
           <div class="col-sm"></div>
-          <div class="col-lg" style="text-align: center">
+          <div class="col-lg">
               <br>
               <img src="interface/book.png" id="logo"><br>
           </div>
           <div class="col-sm"></div>
         </div>
+            
+        <div class="row" id="numerics">
+            <div class="col-lg" id="nav">
+                    <img src="interface/first.png" class="svBtn" id="first" visibility="hidden" onclick="ChangeComic(0)">
+                    <img src="interface/prev.png" class="navBtn" id="prev" visibility="hidden" onclick="ChangeComic(-2)">
+                    <img src="interface/next.png" class="navBtn" id="next" onclick="ChangeComic(-1)">
+                    <img src="interface/last.png" class="svBtn" id="newest" onclick="ChangeComic(-3)">
+                </div>
+
+            <div class="col-lg" id="numCol">
+                <img src="interface/num0.png" visibility="hidden" id="digit3" class="digit">
+                <img src="interface/num0.png" visibility="hidden" id="digit2" class="digit">
+                <img src="interface/num0.png" id="digit1" class="digit">
+            </div>
+            </div>
+
         <div class="row" id="comic">
             <div class="col-lg" id="comicCol">
                 <img id="comicImg" src="assets/0.jpg" width="70%" height="auto"></img>
@@ -46,13 +62,7 @@
                     <img src="interface/save.png" class="svBtn" id="save" onclick="SavePage()">
                     <img src="interface/load.png" class="svBtn" id="load" onclick="LoadPage()">
                 </div>
-                <div class="col-lg" id="nav">
-                    <img src="interface/first.png" class="svBtn" id="first" visibility="hidden" onclick="ChangeComic(0)">
-                    <img src="interface/prev.png" class="navBtn" id="prev" visibility="hidden" onclick="ChangeComic(-2)">
-                    <img src="interface/next.png" class="navBtn" id="next" onclick="ChangeComic(-1)">
-                    <img src="interface/last.png" class="svBtn" id="newest" onclick="ChangeComic(-3)">
-                </div>
-            </div>
+        </div>
     </div>
   </body>
   <footer>

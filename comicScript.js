@@ -2,11 +2,16 @@ var pageNum = 0;
 var totalNum = 5;
 var localStorage = window.localStorage;
 var assets = "assets/"; // Folder name
+var interfaceFld = "interface/";
 var comicImg;
 var btnPrev;
 var btnNext;
 var btnFirst;
 var btnLast;
+
+var digit1; // first digit e.g. one two
+var digit2;
+var digit3;
 
 var lazyLoadInstance = new LazyLoad({
     elements_selector: ".lazy"
@@ -14,6 +19,7 @@ var lazyLoadInstance = new LazyLoad({
 });
 
 function OnStart() {
+    // DOM Capture
     comicImg = document.getElementById('comicImg');
     btnPrev = document.getElementById('prev');
     btnPrev.style.visibility = "hidden";
@@ -21,6 +27,10 @@ function OnStart() {
     btnFirst = document.getElementById('first');
     btnFirst.style.visibility = "hidden";
     btnLast = document.getElementById('newest');
+
+    digit1 = document.getElementById('digit1');
+    digit2 = document.getElementById('digit2');
+    digit3 = document.getElementById('digit3');
 }
 
 function ChangeComic(mode) {
@@ -64,6 +74,16 @@ function ChangeComic(mode) {
     // Change comic
     var newPage = assets + pageNum + ".jpg"
     comicImg.setAttribute('src',newPage);
+
+    // Determine digit display
+    var pgString = pageNum.toString();
+    digit1.setAttribute('src',interfaceFld + "num" + pgString.charAt(pgString.length-1) + ".png");
+    if (pgString.length > 1) { // Digit 2
+        digit2.setAttribute('src',interfaceFld + "num" + pgString.charAt(pgString.length-2) + ".png");
+    } else {digit2.setAttribute('src',interfaceFld + "num0.png");}
+    if (pgString.length > 2) { // Digit 3
+        digit3.setAttribute('src',interfaceFld + "num" + pgString.charAt(pgString.length-3) + ".png");
+    } else {digit3.setAttribute('src',interfaceFld + "num0.png");}
 }
 
 function LoadPage() {
@@ -73,4 +93,28 @@ function LoadPage() {
 
 function SavePage() {
     localStorage.setItem("pageNum", pageNum);
+}
+
+document.onkeydown = checkKey;
+function checkKey(e) {
+
+    e = e || window.event;
+
+    if (e.keyCode == '38') {
+        // up arrow
+        
+    }
+    else if (e.keyCode == '40') {
+        // down arrow
+        
+    }
+    else if (e.keyCode == '37') {
+       // left arrow
+       ChangeComic(-2);
+    }
+    else if (e.keyCode == '39') {
+       // right arrow
+       ChangeComic(-1);
+    }
+
 }
