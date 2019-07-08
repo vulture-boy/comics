@@ -27,8 +27,6 @@ function OnStart() {
     btnFirst = document.getElementById('first');
     btnFirst.style.visibility = "hidden";
     btnLast = document.getElementById('newest');
-    spinner = document.getElementById('spinner');
-    spinner.style.visibility = "hidden";
 
     digit1 = document.getElementById('digit1');
     digit2 = document.getElementById('digit2');
@@ -78,16 +76,10 @@ function ChangeComic(mode) {
 }
 
 function ImageReady() {
-    spinner.setAttribute('visibility',"hidden"); 
-    comicImg.setAttribute('visibility',"visible"); 
+    // STUB
 }
 
 function LoadImage() {
-    comicImg.setAttribute('visibility',"hidden"); // This hides the current image, to indicate that the next page is loading
-    spinner.setAttribute('visibility',"visible"); 
-    var newPage = assets + pageNum + ".jpg" // Determine image to load
-    comicImg.setAttribute('src',newPage);
-
     // Determine digit display
     var pgString = pageNum.toString();
     digit1.setAttribute('src',interfaceFld + "num" + pgString.charAt(pgString.length-1) + ".png");
@@ -97,6 +89,13 @@ function LoadImage() {
     if (pgString.length > 2) { // Digit 3
         digit3.setAttribute('src',interfaceFld + "num" + pgString.charAt(pgString.length-3) + ".png");
     } else {digit3.setAttribute('src',interfaceFld + "num0.png");}
+
+    //comicImg.setAttribute('src',"interface/spinner.svg"); 
+
+    //STUB: figure out async load icon
+
+    var newPage = assets + pageNum + ".jpg" // Determine image to load
+    comicImg.setAttribute('src',newPage);
 }
 
 function LoadPage() {
