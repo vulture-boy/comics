@@ -27,6 +27,8 @@ function OnStart() {
     btnFirst = document.getElementById('first');
     btnFirst.style.visibility = "hidden";
     btnLast = document.getElementById('newest');
+    spinner = document.getElementById('spinner');
+    spinner.style.visibility = "hidden";
 
     digit1 = document.getElementById('digit1');
     digit2 = document.getElementById('digit2');
@@ -72,7 +74,18 @@ function ChangeComic(mode) {
     }
 
     // Change comic
-    var newPage = assets + pageNum + ".jpg"
+    LoadImage();
+}
+
+function ImageReady() {
+    spinner.setAttribute('visibility',"hidden"); 
+    comicImg.setAttribute('visibility',"visible"); 
+}
+
+function LoadImage() {
+    comicImg.setAttribute('visibility',"hidden"); // This hides the current image, to indicate that the next page is loading
+    spinner.setAttribute('visibility',"visible"); 
+    var newPage = assets + pageNum + ".jpg" // Determine image to load
     comicImg.setAttribute('src',newPage);
 
     // Determine digit display
