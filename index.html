@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Pontano+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.0.0/dist/lazyload.min.js"></script>
+    <script src="comicScript.js"></script>
+
+    <title>Comics [Tyson Moll]</title>
+  </head>
+  <body onload="OnStart()">
+    <div class="container">
+        <div class="row" id="headSpace">
+          <div class="col-sm"></div>
+          <div class="col-lg" style="text-align: center">
+              <br>
+              <i>Tyson Moll - Visual Tales</i><br>
+              <a href="https://twitter.com/vvvultures"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.instagram.com/friendly_vultures/"><i class="fab fa-instagram"></i></a>
+              <a href="https://rateyourmusic.com/~amosmyn"><i class="fas fa-headphones-alt"></i></a>
+              <a href="https://vultures.itch.io"><i class="fab fa-itch-io"></i></a>
+              (<a href="https://tysonmoll.ca">portfolio</a>)<br>
+              <br>
+          </div>
+          <div class="col-sm"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg" id="saving">
+                <button id="save" onclick="SavePage()">save</button>
+                <button id="load" onclick="LoadPage()">load</button>
+            </div>
+            <div class="col-lg" id="nav">
+                <button id="first" visibility="hidden" onclick="ChangeComic(0)">first</button>
+                <button id="prev" visibility="hidden" onclick="ChangeComic(-2)">previous</button>
+                <button id="next" onclick="ChangeComic(-1)">next</button>
+                <button id="newest" onclick="ChangeComic(-3)">newest</button>
+            </div>
+        </div>
+        <div class="row" id="comic">
+            <div class="col-lg" id="comicCol">
+                <img id="comicImg" src="assets/0.jpg" width="80%" height="auto"></img>
+            </div>
+        </div>
+    </div>
+  </body></html>
