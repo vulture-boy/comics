@@ -36,7 +36,7 @@ function OnStart() {
 function ChangeComic(mode) {
     // Change Page
     if (mode == -1) { // Next 
-        if (pageNum < totalNum) {
+        if (pageNum < totalNum - 1) {
             pageNum++;
         } 
     } else if (mode == -2) { // Previous
@@ -91,7 +91,7 @@ function LoadImage() {
     } else {digit3.setAttribute('src',interfaceFld + "num0.png");}
 
     //comicImg.setAttribute('src',"interface/spinner.svg"); 
-
+    // https://www.youtube.com/watch?v=qR-Cj1dGgkM
     //STUB: figure out async load icon
 
     var newPage = assets + pageNum + ".jpg" // Determine image to load
